@@ -33,7 +33,9 @@
         <activity
             android:name="es.unizar.eina.catlist.CatEdit"
             android:label="@string/title_activity_cat_edit" />
-        <activity android:name="es.unizar.eina.credits.Credits"></activity>
+        <activity android:name="es.unizar.eina.credits.Credits" />
+        <activity android:name="es.unizar.eina.test.NoteTest" />
+        <activity android:name="es.unizar.eina.test.CategoryTest"></activity>
     </application>
 
 </manifest>

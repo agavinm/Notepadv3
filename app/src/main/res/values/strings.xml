@@ -28,6 +28,8 @@
     <string name="autor2">Eduardo Gimeno Soriano</string>
     <string name="credits">Credits</string>
     <string name="authors">Authors</string>
+    <string name="note_test">Notes tests</string>
+    <string name="cat_test">Categories tests</string>
 
     <!-- Strings related to Settings -->
 

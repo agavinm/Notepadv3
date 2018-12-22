@@ -100,9 +100,12 @@ public class NotesDbAdapter {
      *
      * @param title the title of the note
      * @param body the body of the note
+     * @param category the category of the note
      * @return rowId or -1 if failed
      */
     public long createNote(String title, String body, String category) {
+        if (title.isEmpty()) return -1;
+
         ContentValues initialValues = new ContentValues();
         initialValues.put(KEY_TITLE, title);
         initialValues.put(KEY_BODY, body);
@@ -193,6 +196,8 @@ public class NotesDbAdapter {
      * @return true if the note was successfully updated, false otherwise
      */
     public boolean updateNote(long rowId, String title, String body, String category) {
+        if (title.isEmpty()) return false;
+
         ContentValues args = new ContentValues();
         args.put(KEY_TITLE, title);
         args.put(KEY_BODY, body);

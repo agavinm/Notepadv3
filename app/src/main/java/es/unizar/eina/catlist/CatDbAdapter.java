@@ -100,6 +100,8 @@ public class CatDbAdapter {
      * @return rowId or -1 if failed
      */
     public long createCategory(String title) {
+        if (title.isEmpty()) return -1;
+
         ContentValues initialValues = new ContentValues();
         initialValues.put(KEY_TITLE, title);
 
@@ -160,6 +162,8 @@ public class CatDbAdapter {
      * @return true if the category was successfully updated, false otherwise
      */
     public boolean updateCategory(long rowId, String title) {
+        if (title.isEmpty()) return false;
+
         ContentValues args = new ContentValues();
         args.put(KEY_TITLE, title);
 
